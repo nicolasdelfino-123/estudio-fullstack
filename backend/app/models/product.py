@@ -6,3 +6,11 @@ class Product(db.Model):
     nombre = db.Column(db.String(100), nullable=False)
     stock = db.Column(db.Integer, nullable=False)
     precio = db.Column(db.Numeric(10, 2), nullable=False)
+
+    def serialize(self):
+        return {
+            "id": self.id,
+            "nombre":self.nombre,
+            "stock":self.stock,
+            "precio":self.precio
+        }

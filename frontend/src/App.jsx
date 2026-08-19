@@ -1,8 +1,10 @@
 import { useState } from "react";
+import BuscarProducto from "./components/BuscarProducto";
 function App() {
     const [nombre, setNombre] = useState("");
     const [precio, setPrecio] = useState("");
     const [stock, setStock] = useState("");
+
 
     const API_URL = import.meta.env.VITE_API_URL;
 
@@ -29,6 +31,7 @@ function App() {
     return (
         <div>
             <h1>Productos</h1>
+            <BuscarProducto />
             <label htmlFor="">Nombre</label>
             <input
                 type="text"

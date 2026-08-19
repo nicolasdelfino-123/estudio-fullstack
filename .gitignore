@@ -7,3 +7,5 @@ backend/venv/
 # Python - archivos generados automáticamente
 __pycache__/
 *.pyc
+
+frontend/.env

@@ -3,6 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask import Flask
 from flask_migrate import Migrate
 from dotenv import load_dotenv
+from flask_cors import CORS
 
 
 load_dotenv()
@@ -12,6 +13,7 @@ migrate = Migrate()
 
 def create_app():
     app =  Flask(__name__)
+    CORS(app)
 
     app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
 
